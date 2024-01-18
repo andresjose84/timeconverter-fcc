@@ -44,5 +44,18 @@ class DateFormat {
 
         return this.dateFormat;
     }
+    getCurrentDate () {
+        let daysOfWeek = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ];
+
+        this.dateFormat.unix = dayjs.utc().unix() * 1000;
+
+        this.dateFormat.utc = dayjs().utc().format( 'DD MMM YYYY HH:mm:ss [GMT]' );
+
+        const dayOfWeek = daysOfWeek[ dayjs().utc().day() ];
+
+        this.dateFormat.utc = dayOfWeek + ', ' + this.dateFormat.utc;
+
+        return this.dateFormat;
+    }
 }
 module.exports = DateFormat;
