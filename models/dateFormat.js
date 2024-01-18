@@ -21,7 +21,7 @@ class DateFormat {
             this.dateFormat.unix = this.date;
         }
 
-        this.dateFormat.utc = dayjs( this.date ).utc().format( 'DD MMM YYYY HH:mm:ss [GTM]' );
+        this.dateFormat.utc = dayjs( this.date ).utc().format( 'DD MMM YYYY HH:mm:ss [GMT]' );
 
         const dayOfWeek = daysOfWeek[ dayjs( this.date ).utc().day() ];
 
@@ -36,7 +36,7 @@ class DateFormat {
 
         this.dateFormat.unix = dayjs.utc( this.date ).unix() * 1000;
 
-        this.dateFormat.utc = dayjs( this.date ).utc().format( 'DD MMM YYYY HH:mm:ss [GTM]' );
+        this.dateFormat.utc = dayjs( this.date ).utc().format( 'DD MMM YYYY HH:mm:ss [GMT]' );
 
         const dayOfWeek = daysOfWeek[ dayjs( this.date ).utc().day() ];
 
