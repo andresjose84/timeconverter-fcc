@@ -20,4 +20,4 @@ app.use( express.json() );
 app.use( '/api', require( './routes/date' ) );
 
 
-app.listen( port, () => console.log( `Example app listening on port ${ port }!` ) );
+app.listen( port, () => console.log( `Time Converter app listening on port ${ port }!` ) );
