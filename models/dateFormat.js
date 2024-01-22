@@ -32,7 +32,6 @@ class DateFormat {
     getData () {
 
         let daysOfWeek = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ];
-        console.log( this.date );
 
         this.dateFormat.unix = dayjs.utc( this.date ).unix() * 1000;
 

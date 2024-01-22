@@ -1,7 +1,6 @@
 const DateFormat = require( "../models/dateFormat" );
 
 const formatDate = ( req, res ) => {
-    console.log( 'formatDate' );
     try {
         const { date } = req.params;
 
@@ -20,7 +19,6 @@ const formatDate = ( req, res ) => {
 };
 
 const currentDate = ( req, res ) => {
-    console.log( 'Current date' );
     try {
         const obj = new DateFormat().getCurrentDate();
         return res.status( 200 ).json( obj );

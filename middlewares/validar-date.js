@@ -11,8 +11,6 @@ const isValidDate = ( req, res = response, next ) => {
 
         const isValidDate = dayjs( date ).isValid();
 
-        console.log( 'isValidDate', isValidDate );  
-
         if ( !isValidDate )
             return res.status( 401 ).json( { error: "Invalid Date" } );
         next();
